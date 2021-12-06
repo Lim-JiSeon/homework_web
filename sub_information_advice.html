@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>information_advice</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      // 미리 로딩해둘 이미지 이름 배열
+      var files_hand = [
+        'image/손씻기1.png',
+        'image/손씻기2.png',
+        'image/손씻기3.png',
+        'image/손씻기4.png',
+        'image/손씻기5.png',
+        'image/손씻기6.png',
+      ]
+      var imgs_hand = new Array()
+
+      var files_hand2 = [
+        'image/손소독제1.png',
+        'image/손소독제2.png',
+        'image/손소독제3.png',
+        'image/손소독제4.png',
+        'image/손소독제5.png',
+        'image/손소독제6.png',
+      ]
+      var imgs_hand2 = new Array()
+
+      for (var i = 0; i < files_hand.length; i++) {
+        imgs_hand[i] = new Image() // 이미지 객체 생성
+        imgs_hand[i].src = files_hand[i] // 이미지 미리 로딩
+
+        imgs_hand2[i] = new Image() // 이미지 객체 생성
+        imgs_hand2[i].src = files_hand2[i] // 이미지 미리 로딩
+      }
+
+      // 다음 이미지 출력
+      var index = 1
+      function change_hand(img) {
+        img.src = imgs_hand[index].src // 이미지 변경
+        index++ // 다음 이미지 인덱스
+        index %= imgs_hand.length // 개수를 넘으면 처음으로
+      }
+      var index2 = 1
+      function change_hand2(img) {
+        img.src = imgs_hand2[index2].src // 이미지 변경
+        index2++ // 다음 이미지 인덱스
+        index2 %= imgs_hand2.length // 개수를 넘으면 처음으로
+      }
+    </script>
+  </head>
+  <body>
+    <!--header : main title - main screen으로 가는 하이퍼링크-->
+    <header class="header">
+      <h1>
+        <a
+          id="main_title"
+          href="file:///C:/Users/82105/Desktop/%EC%9B%B9%ED%94%84%20-%20%ED%94%84%EC%A0%9D/main.html"
+          ><img src="image/covid_title.png"
+        /></a>
+      </h1>
+    </header>
+
+    <!--nav : toolbar - sub screen으로 가는 하이퍼링크 메뉴바-->
+    <nav class="nav">
+      <!-- 메인 메뉴 -->
+      <div>
+        <table class="menu">
+          <colgroup>
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+          </colgroup>
+          <!-- 메인 메뉴 활성화 클래스 active 추가 -->
+          <tbody>
+            <tr>
+              <td id="menu_item1">
+                <a
+                  href="file:///C:/Users/82105/Desktop/%EC%9B%B9%ED%94%84%20-%20%ED%94%84%EC%A0%9D/sub_covid19.html"
+                  class="menu_link"
+                  ><strong>covid-19</strong></a
+                >
+              </td>
+              <td id="menu_item2">
+                <a
+                  href="file:///C:/Users/82105/Desktop/%EC%9B%B9%ED%94%84%20-%20%ED%94%84%EC%A0%9D/sub_technology.html"
+                  class="menu_link"
+                  ><strong>technology</strong></a
+                >
+              </td>
+              <td id="menu_item3">
+                <a
+                  href="file:///C:/Users/82105/Desktop/%EC%9B%B9%ED%94%84%20-%20%ED%94%84%EC%A0%9D/sub_news.html"
+                  class="menu_link"
+                  ><strong>news</strong></a
+                >
+              </td>
+              <td id="menu_item4">
+                <a
+                  href="file:///C:/Users/82105/Desktop/%EC%9B%B9%ED%94%84%20-%20%ED%94%84%EC%A0%9D/sub_data.html"
+                  class="menu_link"
+                  ><strong>data</strong></a
+                >
+              </td>
+              <td id="menu_item5">
+                <a
+                  href="file:///C:/Users/82105/Desktop/%EC%9B%B9%ED%94%84%20-%20%ED%94%84%EC%A0%9D/sub_information_test.html"
+                  class="menu_link"
+                  style="color: rgb(115, 160, 158)"
+                  ><strong>information</strong></a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <table class="submenu">
+          <colgroup>
+            <col style="width: 10%" />
+            <col style="width: 10%" />
+            <col style="width: 80%" />
+          </colgroup>
+          <!-- 메인 메뉴 활성화 클래스 active 추가 -->
+          <tbody>
+            <tr>
+              <td id="submenu_item1">
+                <a
+                  href="file:///C:/Users/82105/Desktop/%EC%9B%B9%ED%94%84%20-%20%ED%94%84%EC%A0%9D/sub_information_test.html"
+                  class="submenu_link"
+                  ><strong>test</strong></a
+                >
+              </td>
+              <td id="submenu_item2">
+                <a
+                  href="file:///C:/Users/82105/Desktop/%EC%9B%B9%ED%94%84%20-%20%ED%94%84%EC%A0%9D/sub_information_advice.html"
+                  class="submenu_link"
+                  style="color: rgb(8, 141, 101)"
+                  ><strong>advice</strong></a
+                >
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </nav>
+
+    <!--section : sub functions - test-->
+    <section class="section">
+      <table style="width: 100%">
+        <colgroup>
+          <col style="width: 50%" />
+          <col style="width: 50%" />
+        </colgroup>
+        <tbody>
+          <tr>
+            <td>
+              <h3>
+                올바른 손씻기 6단계<small
+                  >(사진을 클릭하면 다음 단계로 넘어갑니다)</small
+                >
+              </h3>
+              <hr style="margin: 0px 10px 0px 10px" />
+              <img
+                src="image/손씻기1.png"
+                alt="."
+                width="700"
+                height="400"
+                style="text-align: center"
+                onclick="change_hand(this)"
+              />
+            </td>
+            <td>
+              <h3>
+                뿌리는 손소독제 만들기<small
+                  >(사진을 클릭하면 다음 단계로 넘어갑니다)</small
+                >
+              </h3>
+              <hr style="margin: 0px 10px 0px 10px" />
+              <img
+                src="image/손소독제1.png"
+                alt="."
+                width="700"
+                height="400"
+                style="text-align: center"
+                onclick="change_hand2(this)"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 style="margin: 0px 10px 0px 10px">
+        <span style="color: red">주의!</span> 뿌리는 손소독제 만들기 : 농도 83%
+        에탄올 기준. 농도 90% 이상의 에탄올은 자극이 크며, 증발 속도가 너무
+        빠름.
+      </h4>
+    </section>
+
+    <!--footer : title - 홈페이지 타이틀 및 만든이-->
+    <footer class="footer">
+      <p id="footer_text">
+        <br />Homepase Title : Covid19<br />Artist: Lim Ji Seon
+      </p>
+    </footer>
+  </body>
+</html>

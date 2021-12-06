@@ -1,0 +1,149 @@
+/* 전체 구획 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.header {
+  width: 100%;
+  height: 10%;
+  background-image: url('image/covid_header1.png');
+}
+.nav {
+  width: 100%;
+  height: 10%;
+  float: left;
+}
+.section {
+  width: 100%;
+  height: 70%;
+  padding-top: 10%;
+}
+
+.sub_section {
+  width: 100%;
+  height: 100%;
+  padding-top: 7%;
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+  clear: both;
+  background-image: url('image/covid_header.png');
+}
+
+/* main title*/
+#main_title {
+  padding-left: 1%;
+}
+
+/* sub menu bar link button */
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* 2단 메뉴 */
+.menu {
+  width: 100%;
+  /*margin: 20px auto 0; /*block 요소 중앙정렬 및 여백*/
+  text-align: left; /*inline-block요소 중앙정렬*/
+  background-image: url('image/covid_header1.png');
+}
+
+.menu_link {
+  display: block; /*menu_link와 menu_item이 동일한 사이즈 갖게*/
+  padding: 13px 20px; /*각 menu_item들이 여백이 생김으로써 눌러지는 영역이 더 크게 잡혀서 사용자가 누르기 쉽게함*/
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  color: rgb(0, 114, 114);
+}
+#menu_item1:hover .menu_link,
+#menu_item1:active .menu_link,
+#menu_item2:hover .menu_link,
+#menu_item2:active .menu_link,
+#menu_item3:hover .menu_link,
+#menu_item3:active .menu_link,
+#menu_item4:hover .menu_link,
+#menu_item4:active .menu_link,
+#menu_item5:hover .menu_link,
+#menu_item5:active .menu_link {
+  color: rgb(115, 160, 158); /* 메인 메뉴 선택, 활성화 효과 */
+  font-size: xx-large;
+}
+
+/*메인메뉴에 active가 있을 경우에 서브메뉴 노출*/
+.menu_item:active .submenu,
+.menu_item:visited .submenu {
+  display: block; /* 메인 메뉴 활성화 시 서브 메뉴 노출 처리 */
+}
+/*서브메뉴*/
+.submenu {
+  width: 100%;
+  background-image: url('image/covid_submenubar.png');
+  text-align: left;
+}
+
+.submenu_link {
+  display: block;
+  padding: 15px 35px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: rgb(0, 231, 173);
+}
+/* 서브 메뉴 선택, 활성화 시 효과 */
+#submenu_item1:hover .submenu_link,
+#submenu_item1.active .submenu_link,
+#submenu_item2:hover .submenu_link,
+#submenu_item2.active .submenu_link {
+  font-weight: bold;
+  font-size: x-large;
+  color: rgb(8, 141, 101);
+}
+
+/* footer text css */
+#footer_text {
+  color: rgb(128, 128, 194);
+  line-height: 18px;
+  font-style: italic;
+  text-align: center;
+}
+
+/*sub screen - covid 19*/
+
+#covid19_virus_im {
+  float: left;
+  margin: 40px 15px 40px 15px;
+}
+
+/*sub screen - technology*/
+
+#tech1_im,
+#tech2_im {
+  float: left;
+  margin: 15px;
+}
+
+h3 {
+  margin: 10px;
+  font-style: bold;
+  padding-top: 10px;
+}
+
+#tech_table {
+  width: 100%;
+}
+
+/*출처*/
+#source {
+  font-style: italic;
+  font-size: small;
+  float: right;
+  margin-right: 10px;
+}
